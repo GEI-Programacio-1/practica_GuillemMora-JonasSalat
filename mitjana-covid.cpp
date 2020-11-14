@@ -10,7 +10,7 @@ int main() {
       acumulador = acumulador + valor;
       scanf("%i", &valor);
       comptador++ ;
-      if (comptador == 5)
+      if (comptador == 3)
       {
          printf("%i\n",acumulador/comptador);
          acumulador = 0;
