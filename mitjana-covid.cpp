@@ -3,7 +3,7 @@
 
 int main() {
    int valor = 0, comptadorcoma = 0;
-   float acumulador = 0, comptador = 0;
+   float acumulador = 0, comptadorlinia = 0;
    char caracter;
    bool final = false;
 
@@ -17,18 +17,18 @@ int main() {
             scanf("%i", &valor);
             acumulador = acumulador + valor;
             comptadorcoma = 0;
-            comptador++;
+            comptadorlinia++;
          }
          
       }
-      if (comptador == 5){
-         printf(" mitjana %.2f\n",acumulador/comptador);
+      if (comptadorlinia == 5){
+         printf(" mitjana %.2f\n",acumulador/comptadorlinia);
          acumulador = 0;
-         comptador = 0;
+         comptadorlinia = 0;
       }
       
    } while (caracter != '#');
-   if(comptador != 5 && comptador > 0){
-      printf(" mitjana %.2f\n",acumulador/comptador);
+   if(comptadorlinia != 5 && comptadorlinia > 0){
+      printf(" mitjana %.2f\n",acumulador/comptadorlinia);
    }
 }

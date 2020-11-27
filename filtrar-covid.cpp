@@ -3,54 +3,54 @@
 
 int main() {
    int contador = 0, covid;
-   char caracter, char1, char2, char3, campscorrectes;
+   char caracter, char1, char2, char3;
    bool EsMun = false;
 
-   scanf("%c", &caracter);
+	// inici lectura
+	scanf("%c", &caracter);
    
-   while( caracter != '#' ){
-      //printf("entra al bucle \n");
+	while( caracter != '#' ){
 
-      if(caracter == ','){
-         //printf("entra al condicional de la coma \n");
+		//comptar comes
+		if(caracter == ','){
 
-         contador = contador+1;
+			contador = contador+1;
          
-		 if (contador == 4){
-            //printf("entra al condicional de la posició 4 \n");
+			// analitzar si els 3 primers caracters corresponen a Lle de Lleida
+			if (contador == 4){
             
-			scanf("%c", &char1);
-            scanf("%c", &char2);
-            scanf("%c", &char3);
+				scanf("%c", &char1);
+            	scanf("%c", &char2);
+            	scanf("%c", &char3);
             
-			if(char1 == 'L' && char2 == 'l' && char3 == 'e'){
-               //printf("entra al condicional dels caracters Lle \n");
+				if(char1 == 'L' && char2 == 'l' && char3 == 'e'){
 
-               EsMun = true;
+               	EsMun = true;
+
             }
-         }else if ((contador > 5) && (contador < 8)){
-			if (EsMun == true){
-               printf("%c", caracter);
-            }
-		 }	 
-         else if (contador == 8){
-            if (EsMun == true){
-               //printf("entra al condiciona de si es el Municipi \n");
+			// mostrar dades de valor enter a partir del municipi analitzat
+         }else if (contador == 8){
+        	if (EsMun == true){
                
-			   printf("%c", caracter);
-			   scanf("%i", &covid);
-               printf("%i\n", covid);
+				printf("%c", caracter);
+				scanf("%i", &covid);
+            	printf("%i\n", covid);
+
             }
-            
+            // reset de linia
             contador = 0;
             EsMun = false;
+
          }
-      }else if ((contador > 4) && (contador < 8)){
-			if (EsMun == true){
-               printf("%c", caracter);
-            }
+      }
+	  // mostrar dades a partir del municipi analitzat
+	  if ((contador > 4) && (contador < 8) && (EsMun == true) && !((contador == 5) && (caracter == ','))){
+
+		printf("%c", caracter);
+
 		}
       scanf("%c", &caracter);
    }
+   // imprimir delimitador de final del programa
       printf("#\n");
 }
