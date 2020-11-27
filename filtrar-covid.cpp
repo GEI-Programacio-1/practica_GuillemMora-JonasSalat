@@ -1,8 +1,7 @@
 
 #include <stdio.h>
 
-int main() 
-{
+int main() {
    int contador = 0, covid;
    char caracter, char1, char2, char3, campscorrectes;
    bool EsMun = false;
@@ -53,5 +52,5 @@ int main()
 		}
       scanf("%c", &caracter);
    }
-      printf("-1\n");
+      printf("#\n");
 }
