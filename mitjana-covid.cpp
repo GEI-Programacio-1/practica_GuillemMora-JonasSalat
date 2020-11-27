@@ -10,9 +10,11 @@ int main() {
    do{
       scanf("%c", &caracter);
 
+		//comptar comes
       if (caracter == ','){
          comptadorcoma++;
 
+         // suma dels valors llegits
          if (comptadorcoma == 3){
             scanf("%i", &valor);
             acumulador = acumulador + valor;
@@ -21,6 +23,7 @@ int main() {
          }
          
       }
+      // mostrar el valor de la mitjana per al grup 4 -> (n+1)= 5
       if (comptadorlinia == 5){
          printf(" mitjana %.2f\n",acumulador/comptadorlinia);
          acumulador = 0;
@@ -28,6 +31,7 @@ int main() {
       }
       
    } while (caracter != '#');
+   // mostrara unicament si el numero de linies no es acabat en 5 o en 0 i falten fer mitjes
    if(comptadorlinia != 5 && comptadorlinia > 0){
       printf(" mitjana %.2f\n",acumulador/comptadorlinia);
    }
