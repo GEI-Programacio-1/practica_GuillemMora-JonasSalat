@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int main() {
-   int valor = 0, contador = 0;
+   int valor = 0, comptadorcoma = 0;
    float acumulador = 0, comptador = 0;
    char caracter;
    bool final = false;
@@ -11,12 +11,12 @@ int main() {
       scanf("%c", &caracter);
 
       if (caracter == ','){
-         contador++;
+         comptadorcoma++;
 
-         if (contador == 3){
+         if (comptadorcoma == 3){
             scanf("%i", &valor);
             acumulador = acumulador + valor;
-            contador = 0;
+            comptadorcoma = 0;
             comptador++;
          }
          
