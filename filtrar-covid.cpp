@@ -1,6 +1,7 @@
 
 #include <stdio.h>
 
+
 int main() {
    int contador = 0, covid;
    char caracter, char1, char2, char3;
